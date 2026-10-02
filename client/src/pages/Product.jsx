@@ -6,12 +6,13 @@ import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products,currency, addtoCart } = useContext(ShopContext);
+  const { products,currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
   const [size, setSize ] = useState('')
 
   const fetchProductData = async () => {
+
     products.map((item) => {
       if (item._id === productId) {
         setProductData(item);
@@ -69,7 +70,7 @@ const Product = () => {
                   <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size ? 'border-orange-500' : ''}`} key={index}>{item}</button>
                 ))}
               </div>
-              <button onClick={()=>addtoCart(productData._id,size )} className="bg-black text-white px-8 py-3  text-sm active:bg-gray-700">
+              <button onClick={()=>addToCart(productData._id,size )} className="bg-black text-white px-8 py-3  text-sm active:bg-gray-700">
                 ADD TO CARD
               </button>
               <hr className="mt-8 sm:w-4/5" />
@@ -101,6 +102,7 @@ const Product = () => {
                 </div>
 
                 {/* text display related products */}
+
                 <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
 
     </div>
