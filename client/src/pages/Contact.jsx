@@ -1,5 +1,6 @@
 import Title from '../components/Title'
 import {assets} from '../assets/assets'
+import Newsletter from '../components/Newsletter'
 
 
 
@@ -25,6 +26,7 @@ const Contact = () => {
 
 
       </div>
+      <Newsletter/>
 
       
     </div>

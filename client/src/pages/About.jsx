@@ -1,24 +1,69 @@
-import { assets } from "../assets/assets"
-import Title from "../components/Title"
+import { assets } from "../assets/assets";
+import Newsletter from "../components/Newsletter";
+import Title from "../components/Title";
 
 const About = () => {
   return (
     <div>
       <div className="text-2xl text-center pt-8 border-t">
-        <Title text1={'ABOUT'} text2={'US'} />
-
+        <Title text1={"ABOUT"} text2={"US"} />
       </div>
 
       <div className="my-10 flex flex-col md:flex-row gap-16">
-        <img className="w-full md:max-w-[450px] " src={assets.about_img} alt="" />
-        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600"></div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe molestiae officia ab, consequatur mollitia repellat amet repudiandae quidem sequi nesciunt ea illum officiis quam odio, in at exercitationem porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias libero non, eos placeat animi laborum voluptatibus quas eum necessitatibus? Recusandae voluptatum nihil fuga accusantium veritatis, aliquid explicabo esse qui aspernatur?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste veritatis voluptates animi enim! Explicabo asperiores repellendus tempora ullam doloremque modi ipsum a sit! Saepe tempora culpa eius suscipit nemo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur architecto aut harum dolore, facilis eligendi voluptates maiores laborum laboriosam optio ipsa totam, labore explicabo, dolorum error at illo suscipit quaerat.</p>
-          <b className="text-gray-800">Our Mission</b>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptate ducimus beatae dolorem harum ab officia numquam quae. Cupiditate voluptates amet voluptas ex nam iusto veniam tempora inventore et sunt.</p>
+        <img
+          className="w-full md:max-w-[450px] "
+          src={assets.about_img}
+          alt=""
+        />
+        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
+        <p>
+          Forever was born out of a passion for innovation and desire for
+          revolutionize the way people shop online. Our journey began with a
+          simple idea provide a platform where customers can easily discover,
+          explore, and purchase a wide range of products from the comfort of
+          their homes.
+        </p>
+        <p>
+          Since our inception, we've worked tirelessly to curate a diverse
+          selection of high-quality products that cater to every taste and
+          preference. From fashion and beauty to electronics and home
+          essentials, we offer an extensive collection sourced from trusted
+          brands and supplies
+        </p>
+        <b className="text-gray-800">Our Mission</b>
+        <p>
+          Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, form browsing and ordering to delivery and beyond.
+        </p>
+        
+        </div>
       </div>
-    </div>
-  )
-}
+      <div className="text-4xl py-4">
+          <Title text1={'WHY'} text2={'CHOOSE US'} />
+      </div>
+      <div className="flex flex-col md:flex-row text-sm mb-20">
+        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+          <b className="text-gray-600">Quality Assurance</b>
+          <p>We meticulously select and vet each product to ensure it meets our stringent</p>
 
-export default About
+        </div>
+        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+          <b className="text-gray-600">Convenience:</b>
+          <p>We meticulously select and vet each product to ensure it meets our stringent</p>
+          
+
+        </div>
+        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+          <b className="text-gray-600">Exceptional Customer Service:</b>
+          <p>We meticulously select and vet each product to ensure it meets our stringent</p>
+          
+
+        </div>
+
+      </div>
+      <Newsletter/>
+    </div>
+
+  );
+};
+
+export default About;
