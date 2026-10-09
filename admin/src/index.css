@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=Prata&family=Zeyada&display=swap');
+
+.active{
+    background-color: #ffebf5 ;
+    border-color: #c586a5;
+}
+
+*{
+     font-family: outfit;
+;
+}
