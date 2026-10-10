@@ -1,7 +1,8 @@
 
 const Add = () => {
   return (
-    <div>Add</div>
+    <div>
+    </div>
   )
 }
 
