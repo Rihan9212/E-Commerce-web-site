@@ -32,7 +32,7 @@ const adminAuth = async (req, res, next) => {
   } catch (error) {
     console.log(error);
 
-    return res.status(401).json({
+     res.status(401).json({
       success: false,
       message: error.message
     });
