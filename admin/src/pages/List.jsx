@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { backendUrl, currency } from "../App"
 import { toast } from "react-toastify"
 
-const List = (token) => {
+const List = ({token}) => {
 
   const [list, setList]  = useState([])
 
@@ -11,6 +11,8 @@ const List = (token) => {
     try {
       
       const response = await axios.get(backendUrl + '/api/product/list')
+      
+      
       if (response.data.success) {
       
       setList(response.data.products);
@@ -29,6 +31,8 @@ const List = (token) => {
 
   }
 
+
+  //remove product
   const removeProduct = async (id) =>{
     try {
       const response = await axios.post(backendUrl + '/api/product/remove', {id}, {headers:{token}})
@@ -49,9 +53,9 @@ const List = (token) => {
 
   }
 
+
   useEffect(()=>{
     fetchList()
-
   },[])
 
   return (
@@ -59,13 +63,13 @@ const List = (token) => {
     <p className="mb-2">All products List</p>
     <div className="flex flex-col gap-2">
 
-      {/* list payment title */}
-      <div className="hidden md:grid grid-cols-[1fr_3fr_1fr_1fr] items-center py-1 px-2 border bg-gray-100 text-sm" >
-        <p>Image</p>
-        <p>Name</p>
-        <p>Category</p>
-        <p>Price</p>
-        <p>Action</p>
+      {/* list table title */}
+      <div className="hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-gray-100 text-sm" >
+        <b>Image</b>
+        <b>Name</b>
+        <b>Category</b>
+        <b>Price</b>
+        <b className="text-center">Action</b>
       </div>
 
       {/* product list */}
