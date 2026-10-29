@@ -6,6 +6,7 @@ import dns from 'node:dns';
 import connectCloudinary from './config/cloudinary.js';
 import userRouter from './routes/userRoute.js';
 import productRouter from './routes/productRoute.js';
+import cartRouter from './routes/cartRoute.js';
 dns.setServers(['8.8.8.8', '1.1.1.1']);
 
 //App config
@@ -21,6 +22,7 @@ app.use(cors())             //we can access this in any ip
 //API endpoint
 app.use('/api/user', userRouter)
 app.use('/api/product', productRouter)
+app.use('/api/cart',cartRouter)
 
 
 app.get('/', (req,res)=>{
